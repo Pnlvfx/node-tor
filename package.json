@@ -1,0 +1,69 @@
+{
+  "name": "node-tor",
+  "description": "Node.js Tor.",
+  "version": "2024.7.15",
+  "author": {
+    "email": "simonegauli@gmail.com",
+    "name": "Simone Gauli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pnlvfx/node-tor.git"
+  },
+  "keywords": [
+    "tor",
+    "tor-client",
+    "proxy",
+    "http",
+    "socks",
+    "socks5",
+    "socket",
+    "networking"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/tor.js",
+  "module": "./dist/tor.js",
+  "types": "./dist/tor.d.ts",
+  "exports": {
+    "types": "./dist/tor.d.ts",
+    "import": "./dist/tor.js"
+  },
+  "scripts": {
+    "tsc": "tsc --noEmit true",
+    "unused": "node tools/unused.ts",
+    "dev": "tsx --no-cache --watch tools/cli.ts",
+    "test": "node --import tsx --test tests/*.spec.ts",
+    "lint": "eslint",
+    "build": "rimraf dist && eslint && tsc -p tsconfig.build.json",
+    "prepare": "husky",
+    "prepack": "yarn build",
+    "prepublishOnly": "yarn test && eslint",
+    "update": "node tools/update.ts && yarn upgrade-interactive"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@goatjs/core": "github:Pnlvfx/goatjs#workspace=@goatjs/core",
+    "@goatjs/eslint": "github:Pnlvfx/eslint",
+    "@goatjs/node": "github:Pnlvfx/goatjs#workspace=@goatjs/node",
+    "@goatjs/rimraf": "github:Pnlvfx/goatjs#workspace=@goatjs/rimraf",
+    "@goatjs/ts-unused-exports": "github:Pnlvfx/goatjs#workspace=@goatjs/ts-unused-exports",
+    "@goatjs/typescript-config": "github:Pnlvfx/typescript-config",
+    "@goatjs/updater": "github:Pnlvfx/goatjs#workspace=@goatjs/updater",
+    "@types/node": "^24.0.13",
+    "eslint": "^9.31.0",
+    "eslint-plugin-sonarjs": "^3.0.4",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  },
+  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c"
+}

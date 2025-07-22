@@ -4,6 +4,7 @@ import { platform } from './config.js';
 
 /** Start Tor service. It will automatically check if the service is already running */
 export const startService = async () => {
+  // eslint-disable-next-line sonarjs/no-small-switch
   switch (platform) {
     case 'darwin': {
       if (!(await isServiceRunning())) {
@@ -17,6 +18,7 @@ export const startService = async () => {
 
 /** Stop the tor service. */
 export const stopService = async () => {
+  // eslint-disable-next-line sonarjs/no-small-switch
   switch (platform) {
     case 'darwin': {
       if (await isServiceRunning()) {

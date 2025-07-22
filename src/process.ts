@@ -11,6 +11,7 @@ const successMessage = 'Tor started successfully!';
 
 /** @deprecated that's not ready for usage, use startService */
 export const start = async () => {
+  // eslint-disable-next-line sonarjs/no-small-switch
   switch (platform) {
     case 'darwin': {
       await execAsync('/usr/local/opt/tor/bin/tor');
@@ -24,6 +25,6 @@ export const start = async () => {
 };
 
 /** @deprecated that's not ready for usage, use stopService */
-export const stop = async () => {
+export const stop = () => {
   throw new Error('Do not use stop for now.');
 };

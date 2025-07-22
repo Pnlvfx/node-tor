@@ -2,7 +2,8 @@ import net, { type NetConnectOpts } from 'node:net';
 
 export const socks = {
   connect: (options: NetConnectOpts) => {
-    const initialize = () => {};
+    // eslint-disable-next-line no-empty-function, @typescript-eslint/no-empty-function, unicorn/consistent-function-scoping
+    const initialize = async () => {};
 
     const proto = {
       proxy: async () => {
@@ -11,6 +12,7 @@ export const socks = {
     };
 
     const socket = net.connect(options);
+
     return new Promise((resolve, reject) => {
       const onError = (err: Error) => {
         socket.destroy();

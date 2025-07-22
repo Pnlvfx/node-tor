@@ -1,7 +1,7 @@
 {
   "name": "node-tor",
   "description": "Node.js Tor.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "email": "simonegauli@gmail.com",
     "name": "Simone Gauli"

@@ -1,9 +1,7 @@
 import z from 'zod';
 import os from 'node:os';
-import { storage } from '@goatjs/storage';
 
 export const platform = os.platform();
-export const rootDir = await storage.use('tor', { root: true });
 
 export const headers = {
   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0',

@@ -1,3 +1,3 @@
-import { install } from '../flight/install.js';
+import { install } from './install/install.js';
 
 await install();

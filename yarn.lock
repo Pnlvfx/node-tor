@@ -2728,6 +2728,8 @@ __metadata:
     typescript: "npm:^5.8.3"
     zod: "npm:^4.0.5"
   peerDependencies:
+    "@goatjs/pslist": "*"
+    "@goatjs/storage": "*"
     zod: "*"
   bin:
     tor-install: dist/cli/cli.js

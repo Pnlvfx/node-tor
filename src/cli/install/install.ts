@@ -1,13 +1,11 @@
-/* eslint-disable no-console */
-import { execAsync } from '@goatjs/node/exec';
-import { platform } from '../constants.js';
-import { installWindows } from './system/windows.js';
+import { platform } from '../../constants.js';
+import { installMac } from './mac.js';
+import { installWindows } from './windows.js';
 
 export const install = async () => {
   switch (platform) {
     case 'darwin': {
-      const { stdout } = await execAsync('brew install tor');
-      console.log(stdout);
+      await installMac();
       break;
     }
     case 'win32': {

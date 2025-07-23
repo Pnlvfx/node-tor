@@ -64,18 +64,18 @@
     "husky": "^9.1.7",
     "mime-types": "^3.0.1",
     "prettier": "^3.6.2",
+    "tar": "^7.4.3",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "zod": "^4.0.5"
   },
   "peerDependencies": {
+    "@goatjs/pslist": "*",
+    "@goatjs/storage": "*",
     "zod": "*"
   },
   "bin": {
     "tor-install": "dist/cli/cli.js"
   },
-  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c",
-  "dependencies": {
-    "tar": "^7.4.3"
-  }
+  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c"
 }

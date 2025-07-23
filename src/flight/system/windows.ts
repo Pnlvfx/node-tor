@@ -1,35 +1,13 @@
 /* eslint-disable no-console */
-import path from 'node:path';
-import { rootDir } from '../../constants.js';
-import { download } from '@goatjs/download';
-import { extract } from 'tar';
 import fs from 'node:fs/promises';
 import { psList } from '@goatjs/pslist';
 import { spawn } from 'node:child_process';
 import { execAsync } from '@goatjs/node/exec';
-
-const torExecutableName = 'tor.exe';
-const torExecutable = path.join(rootDir, 'tor', torExecutableName);
-
-export const installWindows = async () => {
-  try {
-    await fs.access(torExecutable);
-    console.log('Tor was already installed.');
-  } catch {
-    console.log('Downloading tor expert bundle...');
-    const zipFile = await download('https://dist.torproject.org/torbrowser/13.5.20/tor-expert-bundle-windows-x86_64-13.5.20.tar.gz', {
-      directory: rootDir,
-    });
-    console.log('Extracting tar file.');
-    await extract({ file: zipFile, cwd: rootDir });
-    await fs.rm(zipFile);
-    console.log('Tor installed successfully');
-  }
-};
+import { windowsExecutable, windowsExecutableName } from '../../config.js';
 
 const getTorProcess = async () => {
   const list = await psList();
-  const runningTors = list.filter((i) => i.name === torExecutableName);
+  const runningTors = list.filter((i) => i.name === windowsExecutableName);
   if (runningTors.length > 1) throw new Error('Found more than 1 tor running processes.');
   const child = runningTors.at(0);
   return child;
@@ -37,19 +15,20 @@ const getTorProcess = async () => {
 
 export const requirementsWindows = async () => {
   await getTorProcess(); // CHECK PROCESS LIST
-  return fs.access(torExecutable);
+  return fs.access(windowsExecutable);
 };
 
 export const isRunningWindows = async () => {
   const list = await psList();
-  return list.some((child) => child.name === torExecutableName);
+  return list.some((child) => child.name === windowsExecutableName);
 };
 
-export const startWindows = async () => {
+/** If started with detached you should manually stop it using tor.stop. */
+export const startWindows = async ({ detached }: { detached?: boolean } = {}) => {
   if (!(await isRunningWindows())) {
     return new Promise<void>((resolve, reject) => {
       console.log('Starting tor...');
-      const child = spawn(torExecutable, { detached: true });
+      const child = spawn(windowsExecutable, { detached });
 
       child.on('error', reject);
 

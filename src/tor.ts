@@ -1,15 +1,14 @@
 import type { TorRequestOptions } from './types.js';
-import { install } from './install.js';
-import { startService, stopService } from './service.js';
-import { start, stop } from './process.js';
+import { isRunning, start, stop } from './flight/process.js';
 import { get } from './request.js';
+import { requirements } from './flight/requirements.js';
+
+await requirements();
 
 export const tor = {
-  install,
+  isRunning,
   start,
   stop,
-  startService,
-  stopService,
   get,
   check: async (options: TorRequestOptions = {}) => {
     const res = await get('https://check.torproject.org', options);

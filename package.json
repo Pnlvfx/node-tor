@@ -26,11 +26,8 @@
   "module": "./dist/tor.js",
   "types": "./dist/tor.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/tor.d.ts",
-      "import": "./dist/tor.js"
-    },
-    "./original": "./dist/original/index.js"
+    "types": "./dist/tor.d.ts",
+    "import": "./dist/tor.js"
   },
   "scripts": {
     "tsc": "tsc --noEmit",
@@ -51,16 +48,21 @@
     "README.md"
   ],
   "devDependencies": {
-    "@goatjs/boarding": "^1.0.11",
-    "@goatjs/core": "^1.0.18",
-    "@goatjs/node": "^1.0.18",
-    "@goatjs/node-eslint": "^1.0.12",
-    "@goatjs/rimraf": "^1.0.18",
-    "@goatjs/ts-unused-exports": "^1.0.18",
-    "@goatjs/typescript-config": "^1.0.18",
-    "@types/node": "^24.0.13",
+    "@goatjs/boarding": "^1.0.27",
+    "@goatjs/core": "^1.0.27",
+    "@goatjs/download": "^1.0.27",
+    "@goatjs/node": "^1.0.27",
+    "@goatjs/node-eslint": "^1.0.14",
+    "@goatjs/pslist": "^1.0.27",
+    "@goatjs/rimraf": "^1.0.27",
+    "@goatjs/storage": "^1.0.27",
+    "@goatjs/ts-unused-exports": "^1.0.27",
+    "@goatjs/typescript-config": "^1.0.27",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^24.1.0",
     "eslint": "^9.31.0",
     "husky": "^9.1.7",
+    "mime-types": "^3.0.1",
     "prettier": "^3.6.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
@@ -69,5 +71,11 @@
   "peerDependencies": {
     "zod": "*"
   },
-  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c"
+  "bin": {
+    "tor-install": "dist/cli/cli.js"
+  },
+  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c",
+  "dependencies": {
+    "tar": "^7.4.3"
+  }
 }

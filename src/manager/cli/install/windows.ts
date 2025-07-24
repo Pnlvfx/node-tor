@@ -2,7 +2,7 @@
 import { download } from '@goatjs/download';
 import { extract } from 'tar';
 import fs from 'node:fs/promises';
-import { rootDir, windowsExecutable } from '../../config.js';
+import { rootDir, windowsExecutable } from '../../../config.js';
 
 export const installWindows = async () => {
   try {

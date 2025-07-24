@@ -1,7 +1,7 @@
 import type { TorRequestOptions } from './types.js';
-import { isRunning, start, stop } from './flight/process.js';
 import { get } from './request.js';
-import { requirements } from './flight/requirements.js';
+import { requirements } from './manager/flight/requirements.js';
+import { isRunning, start, stop } from './manager/flight/process.js';
 
 await requirements();
 

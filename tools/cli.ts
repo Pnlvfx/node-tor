@@ -2,7 +2,7 @@
 
 import { input } from '@goatjs/node/input';
 import { tor } from '../src/tor.js';
-import { install } from '../src/cli/install/install.js';
+import { install } from '../src/manager/cli/install/install.js';
 
 const run = async () => {
   console.log('running', await tor.isRunning());

@@ -1,4 +1,4 @@
-import { platform } from '../../constants.js';
+import { platform } from '../../../constants.js';
 import { installMac } from './mac.js';
 import { installWindows } from './windows.js';
 

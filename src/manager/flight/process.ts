@@ -1,4 +1,4 @@
-import { platform } from '../constants.js';
+import { platform } from '../../constants.js';
 import { isRunningWindows, startWindows, stopWindows } from './system/windows.js';
 import { isRunningMac, startMac, stopMac } from './system/mac.js';
 

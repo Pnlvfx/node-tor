@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import { psList } from '@goatjs/pslist';
 import { execAsync } from '@goatjs/node/exec';
-import { windowsExecutable, windowsExecutableName } from '../../config.js';
+import { windowsExecutable, windowsExecutableName } from '../../../config.js';
 import { $startTor } from '../start.js';
 
 const getTorProcess = async () => {

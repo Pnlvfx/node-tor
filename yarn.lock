@@ -2731,7 +2731,7 @@ __metadata:
     "@goatjs/storage": "*"
     zod: "*"
   bin:
-    tor-install: dist/cli/cli.js
+    tor-install: dist/manager/cli/cli.js
   languageName: unknown
   linkType: soft
 

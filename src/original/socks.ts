@@ -137,9 +137,7 @@ export class Socks {
 
         if (this.recv[0] !== socksVersion) {
           err = new Error('Invalid SOCKS version in response');
-        }
-        // TODO: add support for more auth methods
-        else if (this.recv[1] !== noPassMethod) {
+        } else if (this.recv[1] !== noPassMethod) {
           err = new Error('Unexpected SOCKS authentication method');
         }
 

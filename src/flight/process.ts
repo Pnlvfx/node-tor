@@ -1,18 +1,17 @@
-/* eslint-disable no-console */
-import { execAsync } from '@goatjs/node/exec';
 import { platform } from '../constants.js';
 import { isRunningWindows, startWindows, stopWindows } from './system/windows.js';
-
-const successMessage = 'Tor started successfully!';
+import { isRunningMac, startMac, stopMac } from './system/mac.js';
 
 export const isRunning = async () => {
-  // eslint-disable-next-line sonarjs/no-small-switch
   switch (platform) {
     case 'win32': {
       return isRunningWindows();
     }
+    case 'darwin': {
+      return isRunningMac();
+    }
     default: {
-      throw new Error('Node tor is not supported on this platform.');
+      throw new Error('Node tor manager is not supported on this platform.');
     }
   }
 };
@@ -23,10 +22,7 @@ export const start = async () => {
       return startWindows();
     }
     case 'darwin': {
-      throw new Error('Not ready');
-      await execAsync('/usr/local/opt/tor/bin/tor');
-      console.log(successMessage);
-      break;
+      return startMac();
     }
     default: {
       throw new Error('Starting tor is not supported on this platform.');
@@ -35,10 +31,12 @@ export const start = async () => {
 };
 
 export const stop = () => {
-  // eslint-disable-next-line sonarjs/no-small-switch
   switch (platform) {
     case 'win32': {
       return stopWindows();
+    }
+    case 'darwin': {
+      return stopMac();
     }
     default: {
       throw new Error('Starting tor is not supported on this platform.');

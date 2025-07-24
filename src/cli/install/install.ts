@@ -4,12 +4,12 @@ import { installWindows } from './windows.js';
 
 export const install = async () => {
   switch (platform) {
-    case 'darwin': {
-      await installMac();
-      break;
-    }
     case 'win32': {
       await installWindows();
+      break;
+    }
+    case 'darwin': {
+      await installMac();
       break;
     }
     default: {

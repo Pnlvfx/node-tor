@@ -290,11 +290,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@goatjs/boarding@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/boarding@npm:1.0.27"
+"@goatjs/boarding@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/boarding@npm:1.0.31"
   peerDependencies:
-    "@goatjs/download": 1.0.27
+    "@goatjs/download": 1.0.31
     "@goatjs/node": "*"
     "@goatjs/rimraf": "*"
     zod: "*"
@@ -305,13 +305,13 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10c0/07399f6c44b1e6663dd904d48953b664cd0a87d0d1f1c62d796a2f122306465f3839d5592a763fb8dcd278cc39e7e54629aef377381e0553644202f67f9e880d
+  checksum: 10c0/c7856670399334ce5bfc0c08f16a31f16288f2a6b2335f4e8a5409506bcb6d940874898a54e24decd1f3d454d5e28f07418e660a8bf8acf2d52e3ee85878d3a1
   languageName: node
   linkType: hard
 
-"@goatjs/core-eslint@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@goatjs/core-eslint@npm:1.0.14"
+"@goatjs/core-eslint@npm:1.0.18":
+  version: 1.0.18
+  resolution: "@goatjs/core-eslint@npm:1.0.18"
   dependencies:
     "@eslint/js": "npm:^9.31.0"
     eslint-plugin-sonarjs: "npm:^3.0.4"
@@ -321,40 +321,40 @@ __metadata:
     eslint: "*"
     globals: "*"
     typescript-eslint: "*"
-  checksum: 10c0/8a3ce81ec2ca4b100ce8797ea158154ae8f43b6c874fe593d322f39999c3b6302322c4aad299d8aca1b1cd0b5a252b10847c248f02221c018d389373e0316737
+  checksum: 10c0/3f6b4b4b6061d73681d12b8466356403918711a65278c13657bad01a1743837431fdc1e2e53a0377b08ca708c1b25ba0725ee7a4c16dd92ac1301119cc63cb81
   languageName: node
   linkType: hard
 
-"@goatjs/core@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/core@npm:1.0.27"
-  checksum: 10c0/16fa246d9395747c784e61829dc743a87f5abd678907f37202ffbc365cdea35b51f93b1ca07afc848ed88b9a0ff63f023a004525cb45ac659142c490489efb37
+"@goatjs/core@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/core@npm:1.0.31"
+  checksum: 10c0/f4f16889b8d50a8ffee3ea48ff1261db8a1c8a2213c034c2d051f23cd318e746357917ec24b152283af1509502f39a01fefaa34946a44a5a31e1a88790584f7e
   languageName: node
   linkType: hard
 
-"@goatjs/download@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/download@npm:1.0.27"
+"@goatjs/download@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/download@npm:1.0.31"
   peerDependencies:
     "@goatjs/node": "*"
     mime-types: "*"
-  checksum: 10c0/e00eb4c4eb247b612b5aec915f504171f2200144992c488cd4a07bd86db0b8835b83b10e591f90bf1abce7cb30fa1ca6186679c0195e6ae2d797f5702518cead
+  checksum: 10c0/ceb6e7f4bbbd0fff3fa3b4678173045b968a392417fd808463d7b33750da43f1c7f78a716b9f5289d9213ac03eb891ed0db0ea6ec549eff3675a7ac440ca8927
   languageName: node
   linkType: hard
 
-"@goatjs/node-eslint@npm:^1.0.14":
-  version: 1.0.14
-  resolution: "@goatjs/node-eslint@npm:1.0.14"
+"@goatjs/node-eslint@npm:^1.0.18":
+  version: 1.0.18
+  resolution: "@goatjs/node-eslint@npm:1.0.18"
   dependencies:
-    "@goatjs/core-eslint": "npm:1.0.14"
+    "@goatjs/core-eslint": "npm:1.0.18"
     typescript-eslint: "npm:^8.38.0"
-  checksum: 10c0/30f2e537fdfce29dfe6f051c79cf9911468da08a33c177cdb7cb1aeb53aaa3fb319441504277f54b96b457466fc11e769eb0703a5e195404d04be3c23615d5c3
+  checksum: 10c0/f3def0e86459ae36001de288a4facfbb677f4ee3b74eb90e46ab1620e45ecbdf31bd36a1ac623d874e44c061e98f15c6d125259b0dc7096c165ff3ad8712e0ab
   languageName: node
   linkType: hard
 
-"@goatjs/node@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/node@npm:1.0.27"
+"@goatjs/node@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/node@npm:1.0.31"
   dependencies:
     sanitize-filename: "npm:1.6.3"
   peerDependencies:
@@ -362,53 +362,52 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: 10c0/a709d838e787a774d2f20ab09f2792a20b1a8fcb8b3ff1fbbd14deccabe02ea0ad61e939cd778da8e2a4ea255f21492c11fd02f5779191e29b41545f2955693d
+  checksum: 10c0/0e8fed91028094f44e96645f68d5e8e666c2c3920da33599b03b15bac81942c8fa887fbd26428d14d31a2d9b255a9a3ebb0b3d6124c02ec1551fc43f4246a230
   languageName: node
   linkType: hard
 
-"@goatjs/pslist@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/pslist@npm:1.0.27"
-  checksum: 10c0/92b3f40271b4acc87ae4af25931ce38fe75ea934d0e3f84687edb027be02a3d425682ed0375ae41a83fba8c30a169d469f6655e9bc649320afc8efa7d77da880
+"@goatjs/pslist@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/pslist@npm:1.0.31"
+  checksum: 10c0/2666ceb0f51efc261b1d59cc08c0d4954ed2117d8dcf1c0855146359b074f26dec7ac0b2f0b1892f4802207c352a1d75d0630c9cbdebe864140c35661dd91d51
   languageName: node
   linkType: hard
 
-"@goatjs/rimraf@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/rimraf@npm:1.0.27"
+"@goatjs/rimraf@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/rimraf@npm:1.0.31"
   bin:
     rimraf: dist/cli/rimraf.js
-  checksum: 10c0/fe14724e627c3c84507867b425a4c07b28e5d98f78bf26c55321e30d6cb2a28b85ae80dce2af4b0c2d64c1d909366e0d5c8f44431959d6615deb7573c7909698
+  checksum: 10c0/56d519f3af1316c011e1fb450b9caf5ed2bf49c027a86180aa65b518c40308eb8f6aa3e4f0803e14f8f42f4ef20720324d45697e3475dbc1e59ecca62c37ef50
   languageName: node
   linkType: hard
 
-"@goatjs/storage@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/storage@npm:1.0.27"
+"@goatjs/storage@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/storage@npm:1.0.31"
   peerDependencies:
     "@goatjs/node": "*"
-    zod: "*"
-  checksum: 10c0/1c49e6b176c061cc1553840093d06dbf48c4dd7730a0e34330c5e228217e60a348ba41283e000e2a6eaa60daf82a9d323a63c11296cee306e55289eaffc27666
+  checksum: 10c0/d3d8b4e37ec2eb84f6d69617aee22ab853b48d635d302280ee8015471dae555746310ec45c3083b519b87ef1ded8bb72c80f294f57351179ab5de385a882068d
   languageName: node
   linkType: hard
 
-"@goatjs/ts-unused-exports@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/ts-unused-exports@npm:1.0.27"
+"@goatjs/ts-unused-exports@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/ts-unused-exports@npm:1.0.31"
   dependencies:
     ts-unused-exports: "npm:^11.0.1"
   peerDependencies:
     typescript: "*"
-  checksum: 10c0/a020acd6613054ad28477814238a787d4d7735636ae6f79c6c61db04b48e9ebbf46647f64b544aa06de1814287acb2626b4cc660907a7e87ab9e4cff766b10f2
+  checksum: 10c0/fba598aea486e488d1e22094af64bae441027a36225cd9a0c046df991b80a4c2509e0a1a869b0811a61077f4c5cf20c0bc5f5b01846b43e4695e7f4665714446
   languageName: node
   linkType: hard
 
-"@goatjs/typescript-config@npm:^1.0.27":
-  version: 1.0.27
-  resolution: "@goatjs/typescript-config@npm:1.0.27"
+"@goatjs/typescript-config@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@goatjs/typescript-config@npm:1.0.31"
   peerDependencies:
     typescript: "*"
-  checksum: 10c0/5d27f93f295eb27f89d3f5b85ce862179829675de30449be5e1d56b1aefe8f72e3b7cbdfe0638e480b694ece81db759fc6bde2e65376fa492d003f72d39f324d
+  checksum: 10c0/0ad5f6b704aa499b074659b67e3afde9e4189998d59783d528bc87e90cd98f85d00e1e15b0f026a86f6f118f643323229f5af1e623c8eff695d69322b3fd5594
   languageName: node
   linkType: hard
 
@@ -2707,16 +2706,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-tor@workspace:."
   dependencies:
-    "@goatjs/boarding": "npm:^1.0.27"
-    "@goatjs/core": "npm:^1.0.27"
-    "@goatjs/download": "npm:^1.0.27"
-    "@goatjs/node": "npm:^1.0.27"
-    "@goatjs/node-eslint": "npm:^1.0.14"
-    "@goatjs/pslist": "npm:^1.0.27"
-    "@goatjs/rimraf": "npm:^1.0.27"
-    "@goatjs/storage": "npm:^1.0.27"
-    "@goatjs/ts-unused-exports": "npm:^1.0.27"
-    "@goatjs/typescript-config": "npm:^1.0.27"
+    "@goatjs/boarding": "npm:^1.0.31"
+    "@goatjs/core": "npm:^1.0.31"
+    "@goatjs/download": "npm:^1.0.31"
+    "@goatjs/node": "npm:^1.0.31"
+    "@goatjs/node-eslint": "npm:^1.0.18"
+    "@goatjs/pslist": "npm:^1.0.31"
+    "@goatjs/rimraf": "npm:^1.0.31"
+    "@goatjs/storage": "npm:^1.0.31"
+    "@goatjs/ts-unused-exports": "npm:^1.0.31"
+    "@goatjs/typescript-config": "npm:^1.0.31"
     "@types/mime-types": "npm:^3.0.1"
     "@types/node": "npm:^24.1.0"
     eslint: "npm:^9.31.0"
@@ -2726,7 +2725,7 @@ __metadata:
     tar: "npm:^7.4.3"
     tsx: "npm:^4.20.3"
     typescript: "npm:^5.8.3"
-    zod: "npm:^4.0.5"
+    zod: "npm:^4.0.9"
   peerDependencies:
     "@goatjs/pslist": "*"
     "@goatjs/storage": "*"
@@ -3800,9 +3799,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "zod@npm:4.0.5"
-  checksum: 10c0/59449d731ca63849b6bcb14300aa6e2f042d440b3ed294b45c248519aec78780f85a5d1939a62c2ce82e9dc60afca77c8005e0a98d7517b0c2586d6c76940424
+"zod@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "zod@npm:4.0.9"
+  checksum: 10c0/a690e7a24d4333d0bf06e72848b4aeac06c126989eed522ba02afba4a4f1349661945eaf5c1a32bda7fa655e710ad6116e381c8489e52e77e418908512353b74
   languageName: node
   linkType: hard

@@ -4,6 +4,7 @@ import { psList } from '@goatjs/pslist';
 import { spawn } from 'node:child_process';
 import { execAsync } from '@goatjs/node/exec';
 import { windowsExecutable, windowsExecutableName } from '../../config.js';
+import { startingMessage, successMessage } from '../messages.js';
 
 const getTorProcess = async () => {
   const list = await psList();
@@ -14,8 +15,8 @@ const getTorProcess = async () => {
 };
 
 export const requirementsWindows = async () => {
+  await fs.access(windowsExecutable);
   await getTorProcess(); // CHECK PROCESS LIST
-  return fs.access(windowsExecutable);
 };
 
 export const isRunningWindows = async () => {
@@ -27,7 +28,7 @@ export const isRunningWindows = async () => {
 export const startWindows = async ({ detached }: { detached?: boolean } = {}) => {
   if (!(await isRunningWindows())) {
     return new Promise<void>((resolve, reject) => {
-      console.log('Starting tor...');
+      console.log(startingMessage);
       const child = spawn(windowsExecutable, { detached });
 
       child.on('error', reject);
@@ -39,6 +40,7 @@ export const startWindows = async ({ detached }: { detached?: boolean } = {}) =>
       child.stdout.on('data', (chunk: Buffer) => {
         const data = chunk.toString();
         if (data.includes('Bootstrapped 100%')) {
+          console.log(successMessage);
           resolve();
         }
       });

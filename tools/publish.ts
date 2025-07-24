@@ -1,3 +1,3 @@
-import { verdaccio } from '@goatjs/boarding/verdaccio';
+import { verdy } from '@goatjs/boarding/verdy';
 
-await verdaccio.publish();
+await verdy.publish();

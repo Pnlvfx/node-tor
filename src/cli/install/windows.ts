@@ -7,7 +7,7 @@ import { rootDir, windowsExecutable } from '../../config.js';
 export const installWindows = async () => {
   try {
     await fs.access(windowsExecutable);
-    console.log('Tor was already installed.');
+    console.log('Tor already installed.');
   } catch {
     console.log('Downloading tor expert bundle...');
     const zipFile = await download('https://dist.torproject.org/torbrowser/13.5.20/tor-expert-bundle-windows-x86_64-13.5.20.tar.gz', {

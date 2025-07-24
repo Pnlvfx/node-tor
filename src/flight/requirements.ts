@@ -1,11 +1,15 @@
-/* eslint-disable sonarjs/no-small-switch */
 import { platform } from '../constants.js';
+import { requirementsMac } from './system/mac.js';
 import { requirementsWindows } from './system/windows.js';
 
 export const requirements = async () => {
   switch (platform) {
     case 'win32': {
       await requirementsWindows();
+      break;
+    }
+    case 'darwin': {
+      await requirementsMac();
       break;
     }
     default: {

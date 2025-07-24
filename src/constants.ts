@@ -1,4 +1,4 @@
-import z from 'zod';
+import { z } from 'zod';
 import os from 'node:os';
 
 export const platform = os.platform();

@@ -48,16 +48,16 @@
     "README.md"
   ],
   "devDependencies": {
-    "@goatjs/boarding": "^1.0.27",
-    "@goatjs/core": "^1.0.27",
-    "@goatjs/download": "^1.0.27",
-    "@goatjs/node": "^1.0.27",
-    "@goatjs/node-eslint": "^1.0.14",
-    "@goatjs/pslist": "^1.0.27",
-    "@goatjs/rimraf": "^1.0.27",
-    "@goatjs/storage": "^1.0.27",
-    "@goatjs/ts-unused-exports": "^1.0.27",
-    "@goatjs/typescript-config": "^1.0.27",
+    "@goatjs/boarding": "^1.0.31",
+    "@goatjs/core": "^1.0.31",
+    "@goatjs/download": "^1.0.31",
+    "@goatjs/node": "^1.0.31",
+    "@goatjs/node-eslint": "^1.0.18",
+    "@goatjs/pslist": "^1.0.31",
+    "@goatjs/rimraf": "^1.0.31",
+    "@goatjs/storage": "^1.0.31",
+    "@goatjs/ts-unused-exports": "^1.0.31",
+    "@goatjs/typescript-config": "^1.0.31",
     "@types/mime-types": "^3.0.1",
     "@types/node": "^24.1.0",
     "eslint": "^9.31.0",
@@ -67,7 +67,7 @@
     "tar": "^7.4.3",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "zod": "^4.0.5"
+    "zod": "^4.0.9"
   },
   "peerDependencies": {
     "@goatjs/pslist": "*",

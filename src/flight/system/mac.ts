@@ -1,10 +1,19 @@
 /* eslint-disable no-console */
 import { execAsync } from '@goatjs/node/exec';
-import { startingMessage, successMessage } from '../messages.js';
 import { psList } from '@goatjs/pslist';
+import { $startTor } from '../start.js';
+
+const getTorProcess = async () => {
+  const list = await psList();
+  const runningTors = list.filter((i) => i.name === 'tor');
+  if (runningTors.length > 1) throw new Error('Found more than 1 tor running processes.');
+  const child = runningTors.at(0);
+  return child;
+};
 
 export const requirementsMac = async () => {
   if (!(await $isInstalledMac())) throw new Error('Tor is not installed on your system. Please run our installer manager before continuing.');
+  await getTorProcess();
 };
 
 export const $isInstalledMac = async () => {
@@ -15,19 +24,20 @@ export const $isInstalledMac = async () => {
 
 export const isRunningMac = async () => {
   const list = await psList();
-  console.log(list);
-  // TODO [2025-07-25] implement start then do this.
-  return false;
+  return list.some((i) => i.name === 'tor');
 };
 
 export const startMac = async () => {
   if (!(await isRunningMac())) {
-    console.log(startingMessage);
-    await execAsync('/usr/local/opt/tor/bin/tor');
-    console.log(successMessage);
+    await $startTor('/usr/local/opt/tor/bin/tor');
   }
 };
 
 export const stopMac = async () => {
-  // TODO [2025-07-25] implement start then do this.
+  const child = await getTorProcess();
+  if (child) {
+    console.log('Stopping tor...');
+    await execAsync(`kill ${child.pid.toString()}`);
+    console.log('Tor stopped!');
+  }
 };

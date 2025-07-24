@@ -1,6 +1,6 @@
 {
   "name": "node-tor",
-  "description": "Node.js Tor.",
+  "description": "Node.js Tor",
   "version": "1.0.2",
   "author": {
     "email": "simonegauli@gmail.com",

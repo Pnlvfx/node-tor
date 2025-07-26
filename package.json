@@ -1,5 +1,5 @@
 {
-  "name": "node-tor",
+  "name": "@goatjs/tor",
   "description": "Node.js Tor",
   "version": "1.0.4",
   "author": {
@@ -57,16 +57,15 @@
     "@goatjs/storage": "^1.0.39",
     "@goatjs/ts-unused-exports": "^1.0.39",
     "@goatjs/typescript-config": "^1.0.39",
-    "@types/mime-types": "^3.0.1",
     "@types/node": "^24.1.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "husky": "^9.1.7",
     "mime-types": "^3.0.1",
     "prettier": "^3.6.2",
     "tar": "^7.4.3",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "zod": "^4.0.9"
+    "zod": "^4.0.10"
   },
   "peerDependencies": {
     "@goatjs/pslist": "*",

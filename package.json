@@ -1,7 +1,7 @@
 {
   "name": "@goatjs/tor",
   "description": "Node.js Tor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "email": "simonegauli@gmail.com",
     "name": "Simone Gauli"
